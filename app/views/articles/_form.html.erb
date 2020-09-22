@@ -1,5 +1,8 @@
-<%= simple_form_for(article) do |form| %>
+
+
+<div class="container p-4"><%= simple_form_for(article) do |form| %>
   <%= form.input :title, placeholder: 'Type a title' %>
   <%= form.input :content, placeholder: 'Type a description' %>
-  <%= form.submit action_name == 'new' ? 'save article' : 'edit article' %>
+  <%= form.submit action_name == 'new' ? 'save article' : 'edit article', class: "btn btn-success" %>
 <% end %>
+</div>

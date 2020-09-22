@@ -1,13 +1,16 @@
-<h1>Just some amazing articles</h1>
+<div class="container"><h1>Just some amazing articles</h1></div>
 
-<%= link_to 'Make a new article', new_article_path %>
+<div class="alert alert-dark" role="alert"> <%= link_to 'Click here to make a new article', new_article_path, class: "alert-link" %> </div>
 
-<ul>
+<ul class="list-group">
   <% @articles.each do |article| %>
-    <%= link_to article_path(article['id']) do %>
-      <li><%=article.title %></li>
-      <li><%=article.content %></li>
-      <br>
-    <% end %>
+    <div class="container">
+      <%= link_to article_path(article['id']) do %>
+        <li class="list-group-item active d-flex justify-content-between"><strong><%=article.title %></strong>
+        <span class="btn btn-dark ">Inspect</span></li>
+      <% end %>
+        <li class="list-group-item"><em><%=article.content %></em></li>
+        <br>
+    </div>
   <% end %>
 </ul>

@@ -12,7 +12,7 @@ puts 'Creating 100 fake articles...'
 100.times do
   Article.create(
     title: Faker::Hipster.sentence,
-    content: Faker::Hipster.sentences(number: 1)
+    content: Faker::Hipster.sentence
   )
 end
 puts 'Completed!'
